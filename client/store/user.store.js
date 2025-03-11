@@ -28,7 +28,6 @@ const useUserStore = create((set) => ({
     try {
       const response = await axios.post("/api/auth/register", userData);
       set({
-        user: response.data.data,
         loading: false,
       });
     } catch (error) {
